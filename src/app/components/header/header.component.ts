@@ -21,16 +21,14 @@ export class HeaderComponent implements OnInit {
     const divHeader = window.document.getElementById('bgHeader');
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
       if (header !== null) {
-        //header.classList.add('inset-x-0');
         logo?.classList.add('w-[40px]');
-        divHeader?.classList.add('bg-black');
+        divHeader?.classList.add('bg-black', 'pb-4');
       }
       
     } else {
       if (header !== null) {
-        //header.classList.remove('inset-x-0');
         logo?.classList.remove('w-[40px]');
-        divHeader?.classList.remove('bg-black')
+        divHeader?.classList.remove('bg-black', 'pb-4')
       }
     }
   }

@@ -1,18 +1,9 @@
 @defer (on viewport) {
     <app-carousel-banner></app-carousel-banner>
 } @placeholder {
-    <div class="carousel h-[700px] flex items-center justify-center">
-        <div class="loader-spin text-slate-700">
-            <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
-        </div>
-    </div>
-
+    <app-loader-spin></app-loader-spin>
 } @loading {
-    <div class="carousel h-[700px] flex items-center justify-center">
-        <div class="loader-spin text-slate-700">
-            <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
-        </div>
-    </div>
+    <app-loader-spin></app-loader-spin>
 }
 
 <p class="text-white">home works!</p>

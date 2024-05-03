@@ -1,5 +1,14 @@
-<div class="carousel h-[700px] flex items-center justify-center">
-    <div class="loader-spin text-slate-700">
-        <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
-    </div>
-</div>
+<ngx-slick-carousel class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig">
+    @for (slide of banners; track slide.id_banner){
+        <div ngxSlickItem class="slide">
+            <div class="holak">
+                <h1 class="text-white">{{slide.titulo_banner}}</h1>
+                <p class="text-white">{{slide.texto_boton}}</p>
+                <a class="text-white" href="{{slide.url_boton}}"></a>
+            </div>
+        </div>
+    }
+</ngx-slick-carousel>
+    
